@@ -1,0 +1,200 @@
+/* Slider Container */
+.slider-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto; /* Center the container */
+    background-color: rgb(246, 246, 246);
+    overflow: hidden;
+    padding-bottom: 50px;
+}
+
+/* Center Picture Names */
+.namediv {
+    font-weight: 600;
+    text-align: center; /* Center the picture names */
+    font-size: 1.2em;
+}
+
+/* Marking Section */
+.marking {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.marking img {
+    width: 120px; /* Adjust this width as needed */
+    max-width: 100%;
+}
+
+/* Feedback Text */
+.feedbackmatter {
+    text-align: center;
+    font-size: 16px; /* Make font-size responsive */
+    margin-bottom: 15px;
+    padding: 0 180px; /* Add padding to keep text from touching edges */
+    line-height: 1.5; /* Improve readability */
+}
+
+/* Image Section (Client Images and Names) */
+.imgnamediv {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imgnamediv .imgdiv {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.imgnamediv .imgdiv img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+/* Responsive Breakpoints */
+@media screen and (max-width: 1440px) {
+    .marking img {
+        width: 100px;
+    }
+
+    .feedbackmatter {
+        font-size: 15px;
+        padding: 0 18px;
+    }
+
+    .imgnamediv .imgdiv {
+        width: 120px;
+        height: 120px;
+    }
+
+    .namediv {
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .marking img {
+        width: 90px;
+    }
+
+    .feedbackmatter {
+        font-size: 14px;
+        padding: 0 16px;
+    }
+
+    .imgnamediv .imgdiv {
+        width: 100px;
+        height: 100px;
+    }
+
+    .namediv {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .marking img {
+        width: 80px;
+    }
+
+    .feedbackmatter {
+        font-size: 13px;
+        padding: 0 14px;
+    }
+
+    .imgnamediv .imgdiv {
+        width: 90px;
+        height: 90px;
+    }
+
+    .namediv {
+        font-size: 0.95em;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .marking img {
+        width: 70px;
+    }
+
+    .feedbackmatter {
+        font-size: 12px;
+        padding: 0 12px;
+    }
+
+    .imgnamediv .imgdiv {
+        width: 80px;
+        height: 80px;
+    }
+
+    .namediv {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .marking img {
+        width: 65px;
+    }
+
+    .feedbackmatter {
+        font-size: 11px;
+        padding: 0 10px;
+    }
+
+    .imgnamediv .imgdiv {
+        width: 75px;
+        height: 75px;
+    }
+
+    .namediv {
+        font-size: 0.85em;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .marking img {
+        width: 60px;
+    }
+
+    .feedbackmatter {
+        font-size: 10px;
+        padding: 0 8px;
+    }
+
+    .imgnamediv .imgdiv {
+        width: 70px;
+        height: 70px;
+    }
+
+    .namediv {
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .marking img {
+        width: 55px;
+    }
+
+    .feedbackmatter {
+        font-size: 5px;
+        padding: 0 5px;
+    }
+
+    .imgnamediv .imgdiv {
+        width: 60px;
+        height: 60px;
+    }
+
+    .namediv {
+        font-size: 0.75em;
+    }
+}

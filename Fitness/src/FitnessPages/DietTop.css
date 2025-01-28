@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Diet-top-wrapper {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background-image: url('/DietBgImage.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Diet-top-desc {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.63);
+}
+
+.Diet-top-desc h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: rgb(241, 244, 247);
+    margin: 0 !important;
+}
+
+.Diet-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.Diet-nav button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.Diet-nav p {
+    color: #01b5b5;
+    font-size: 16px;
+    font-weight: 700;
+}

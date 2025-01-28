@@ -1,0 +1,151 @@
+.orders-container {
+
+    padding: 40px; /* Increased padding for overall spacing */
+
+    text-align: center; /* Center-align all text */
+
+    background-color: #f9f9f9; /* Light background for contrast */
+
+}
+
+
+
+h2 {
+
+    margin-bottom: 30px; /* Space below the heading */
+
+    font-size: 2em; /* Larger font size for the heading */
+
+    color: #333; /* Dark color for the heading */
+
+}
+
+
+
+.items-grid {
+
+    display: flex;
+
+    flex-wrap: wrap; /* Allows items to wrap into new rows */
+
+    justify-content: center; /* Center the cards horizontally */
+
+    margin: 0 auto;
+
+    width: 100%;
+
+    max-width: 1200px; /* Set a maximum width for the grid */
+
+    gap: 20px; /* Space between item cards */
+
+}
+
+
+
+.item-card {
+
+    display: flex; /* Flexbox for horizontal layout */
+
+    align-items: center; /* Center items vertically */
+
+    border: 1px solid #ccc;
+
+    border-radius: 10px; /* Slightly increased border radius for a softer look */
+
+    padding: 20px; /* Padding inside the card */
+
+    width: calc(33.33% - 20px); /* Three columns layout, subtracting gap */
+
+    max-width: 350px; /* Optional maximum width for cards */
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Increased shadow for depth */
+
+    background-color: #fff; /* Card background color */
+
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effects */
+
+}
+
+
+
+.item-card:hover {
+
+    transform: translateY(-4px); /* Lift effect on hover */
+
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+
+}
+
+
+
+.item-image {
+
+    width: 100px; /* Increased width for images */
+
+    height: 100px; /* Increased height for images */
+
+    border-radius: 8px; /* More rounding for the image */
+
+    margin-right: 20px; /* Space between image and text */
+
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+
+}
+
+
+
+.item-details {
+
+    flex-grow: 1; /* Allow details to take remaining space */
+
+    display: flex; /* Use flexbox for text alignment */
+
+    flex-direction: column; /* Stack details vertically */
+
+    text-align: left; /* Align text to the left */
+
+}
+
+
+
+.item-details h4:hover{
+
+    color: #008080;
+
+}
+
+
+
+.item-card h4 {
+
+    margin: 0 0 5px 0; /* Margin for product name */
+
+    font-size: 1.2em; /* Slightly larger font size for product name */
+
+    color: #555; /* Slightly lighter color for the product name */
+
+}
+
+
+
+.item-card p {
+
+    margin: 3px 0; /* Adjusted margin for quantity and date of purchase */
+
+    font-size: 0.9em; /* Slightly smaller font size for description */
+
+    color: #777; /* Lighter color for description text */
+
+}
+
+@media (max-width: 768px) {
+    .item-card {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .item-card {
+        width: 100%; /* Single column on very small screens */
+    }
+}

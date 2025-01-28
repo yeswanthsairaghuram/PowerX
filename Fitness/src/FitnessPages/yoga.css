@@ -1,0 +1,56 @@
+
+  
+  .yoga-services-container {
+    text-align: center;
+    margin-top: 50px;
+    color:black;
+  }
+  
+  .yoga-services-header {
+    font-size: 12px;
+    letter-spacing: 10px;
+    font-weight: bold;
+
+  }
+  
+  .yoga-services-title {
+    font-size: 68px;
+    font-weight: bold;
+    color:  #008080;
+  }
+  
+  .yoga-services-description {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .yoga-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+  }
+
+  .yoga-cards {
+    width: 400px;
+  }
+
+  .yoga-cards img {
+    width: 100%;
+  height: auto;
+  border-radius: 30px;
+  }
+
+  .yoga-cards-container h3 {
+    margin-top: 35px;
+    text-align: center;
+    color: #008080;
+  }
+
+  .yoga-cards-container p {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+  }

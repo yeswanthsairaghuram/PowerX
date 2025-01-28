@@ -1,0 +1,258 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  /* background: linear-gradient(135deg, #008080, #005050);  */
+  background-attachment: fixed;
+}
+
+.login-signup-wrapper {
+  position: relative;
+  background: linear-gradient(135deg, rgba(0, 128, 128, 0.8), rgb(0, 85, 85)), url('/LoginBgImage.jpg') no-repeat center center / cover; 
+}
+
+.logo-sign {
+  position: absolute;
+  top: 40%; /* Adjust based on your design */
+  left: 10%;
+  transform: translateX(-50%);
+  max-width: 130px; /* Adjust the size as needed */
+  margin-bottom: 20px; /* Space between logo and form */
+  z-index: 10; /* Ensure it's on top of the background */
+  filter: drop-shadow(0 0 0.75rem black);
+}
+
+
+.login-signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('path/to/your/background/image.jpg') no-repeat center center / cover; /* Add a background image */
+}
+
+.form-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2.5rem;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added box-shadow transition */
+}
+
+.form-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.form-container h1 {
+  color: #008080;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 2.5rem;
+  transition: transform 0.3s ease; /* Added transition for input groups */
+}
+
+.input-group input {
+  padding-left: 2.5rem; /* Space for the icon */
+}
+
+.input-group label {
+  position: absolute;
+  top: -25px; /* Position label above the input */
+  left: 15px; /* Adjust to avoid overlap with icon */
+  font-size: 0.9rem; /* Smaller font size */
+  color: #666;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease; /* Label transition */
+}
+
+.input-group input:focus {
+  border-color: #008080;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 128, 128, 0.5);
+}
+
+.input-group svg {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #008080;
+}
+
+.loader {
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #008080;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+  display: inline-block; /* Ensure it's visible */
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #008080;
+  z-index: 1;
+}
+
+.submit-btn {
+  background-color: #008080;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 128, 128, 0.1);
+}
+
+.submit-btn:hover {
+  background-color: #006666;
+  transform: scale(1.05); /* Slight scale on hover */
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.toggle-link {
+  margin-top: 1.5rem;
+  color: #008080;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+
+.toggle-link:hover {
+  color: #006666;
+  /* text-decoration: underline; */
+}
+
+.password-strength {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease; /* Fade in */
+}
+
+.password-strength.show {
+  opacity: 1; /* Show on condition */
+}
+
+.strength-bar {
+  height: 5px;
+  background-color: #e0e0e0;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.strength-progress {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.strength-progress.weak { background-color: #ff4d4d; }
+.strength-progress.medium { background-color: #ffa500; }
+.strength-progress.strong { background-color: #00cc00; }
+
+.password-rules {
+  list-style: none;
+  padding-left: 0;
+  font-size: 0.9rem;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.password-rules li {
+  margin-bottom: 0.5rem;
+  color: #808080;
+  display: flex;
+  align-items: center;
+}
+
+.password-rules li.valid {
+  color: #008080;
+}
+
+.check-icon {
+  margin-right: 0.5rem;
+  color: #00cc00;
+}
+
+.check-icon.hidden {
+  visibility: hidden;
+}
+
+.message {
+  margin-top: 1rem;
+  color: #008080;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease-in-out;
+  transition: opacity 0.3s ease; /* Smooth transition for messages */
+}
+
+/* Optional: Add a subtle pulse effect to the message */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+      width: 90%;
+      padding: 2rem;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .logo-sign {
+    display: none;
+  }
+}

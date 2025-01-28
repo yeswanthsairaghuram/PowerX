@@ -1,0 +1,321 @@
+.food-diet-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #f0f9f9;
+    padding: 40px 20px;
+  }
+  
+  .filter-section {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    margin: 20px 0;
+    background-color: #e0f4f4;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 128, 128, 0.2);
+  }
+  
+  .search-bar-input {
+    width: 100%;
+    max-width: 600px;
+    padding: 14px;
+    border: 1px solid #008080;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #008080;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .search-bar-input:focus {
+    border-color: #004d4d;
+  }
+  
+  .filters-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .filters-container select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #008080;
+    color: #008080;
+    font-size: 16px;
+    background-color: #f0f9f9;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .filters-container select:focus {
+    border-color: #004d4d;
+  }
+  
+  .diet-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding-top: 20px;
+  }
+  
+  .diet-card-wrapper {
+    border: 1px solid rgba(0, 128, 128, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    width: 290px;
+    background-color: #ffffff;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 128, 128, 0.1);
+  }
+  
+  .diet-card-wrapper:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 128, 128, 0.3);
+    cursor: pointer;
+  }
+  
+  .diet-image {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #008080;
+    box-shadow: 0px 5px 10px #008080;
+  }
+  
+  .diet-name {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #008080;
+    font-weight: 600;
+  }
+  
+  .diet-info {
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: #666;
+  }
+  
+  .diet-kcal {
+    color: #ff9800;
+    margin-right: 20px;
+  }
+  
+  .diet-category {
+    width: 42%;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    /* margin: 0 auto; */
+    padding: 8px 12px;
+    border-radius: 15px 0px 15px 0px;
+    background-color: #008080a2;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .weight-gain {
+    background-color: #ffe082;
+  }
+  
+  .weight-loss {
+    background-color: #c8e6c9;
+  }
+  
+  .diet-type {
+    padding: 4px 10px;
+    border-radius: 8px;
+    background-color: #008080;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  .breakfast {
+    background-color: #ffcc80;
+  }
+  
+  .lunch {
+    background-color: #ffab91;
+  }
+  
+  .dinner {
+    background-color: #80cbc4;
+  }
+  
+  .diet-description {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .diet-benefits {
+    font-size: 14px;
+    color: #28a745;
+    text-align: left;
+    margin: 15px 0px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .filters-container label {
+    font-size: 16px;
+    color: #008080;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  
+  .filters-container select {
+    margin-bottom: 10px;
+  }
+
+  .pagination-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .pagination-button {
+    padding: 10px 15px;
+    background-color: #008080;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pagination-button:hover {
+    background-color: #004d4d;
+  }
+  
+  .pagination-button.active {
+    background-color: #00c6c2;
+  }
+
+  .pagination-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .pagination-arrow {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #008080;
+    padding: 10px 25px;
+  }
+  
+  .dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .dot {
+    font-size: 20px;
+    cursor: pointer;
+    color: #cccccc;
+    transition: color 0.3s;
+  }
+  
+  .dot.active {
+    color: #008080;
+  }
+  
+  .pagination-arrow:disabled {
+    cursor: not-allowed;
+    color: #cccccc;
+  }
+  
+
+  .done-button {
+    background-color: #28a745; /* Default button color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    }
+    
+    /* When the button is hovered */
+    .done-button:hover {
+    background-color: #0a5d1c;
+    }
+
+    .done-delete-section {
+      display: flex;
+      justify-content: center;
+    }
+    
+    /* Optional styling for disabled button */
+    .done-button:disabled {
+    background-color: white; /* Grey background when disabled */
+    cursor: not-allowed; /* Change cursor to not-allowed */
+    opacity: 0.7; 
+    color: #ccc;/* Make the button semi-transparent when disabled */
+    }
+    
+    /* Styling for the Done text */
+    .done-text {
+    font-weight: bold; /* Bold for emphasis */
+    }
+    
+    /* Styling for the small tick image */
+    .small-tick {
+    width: 40px; /* Adjust the width as needed */
+    height: 40px;
+    border: none;
+    border-radius: 100; /* Adjust the height as needed */
+    }
+    .delete-button {
+    background-color: transparent; /* No background color */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    gap: 10px;/* Center horizontally */
+    width: 35px; /* Set a fixed width */
+    height: 35px; /* Set a fixed height */
+    transition: transform 0.2s; /* Smooth scaling effect */
+    }
+    
+    .delete-button img {
+    width: 18px; /* Make the image fill the button */
+    height: 18px; /* Maintain the aspect ratio */
+    }
+    
+    .timer {
+    font-size: 0.8rem; /* Adjust the font size as needed */
+    color: #FF5733; /* Change color to your preference */
+    font-weight: bold; /* Make it bold for emphasis */
+    margin-top: 0px; /* Space above the timer */
+    text-align: center; /* Center the text */
+    /* Semi-transparent background */
+    /* Rounded corners */
+    padding: 5px;
+    }

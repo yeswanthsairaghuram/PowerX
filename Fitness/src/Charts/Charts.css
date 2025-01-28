@@ -1,0 +1,112 @@
+/* Charts.css */
+.chart-container {
+  padding: 20px;
+  margin: 20px auto;
+  background-color: #fff; /* White background for cleanliness */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  max-width: 600px; /* Reduced width for a more compact layout */
+  border: 1px solid #e0e0e0; /* Subtle border */
+}
+
+.total-calories {
+  text-align: center;
+  font-size: 1.8em; /* Increased font size for visibility */
+  font-weight: bold;
+  color: #333; /* Darker text for readability */
+  padding: 20px 0px;
+  margin-bottom: 20px;
+  transition: color 0.3s; /* Smooth color change */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow buttons to wrap in small screens */
+  margin-bottom: 20px;
+}
+
+.filter-button {
+  margin: 5px; /* Reduced margin for better spacing */
+  padding: 12px 20px;
+  background-color: #008080; /* Primary button color */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+  font-size: 1em; /* Consistent button text size */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.filter-button:hover {
+  background-color: #005a5a;
+  transform: translateY(-2px);
+}
+
+.filter-button:active {
+  transform: translateY(0); /* Reset position on click */
+}
+
+.line-chart {
+  position: relative; /* Position for better control */
+  height: 300px; /* Fixed height for charts */
+  margin: 0 auto; /* Center chart */
+}
+
+.exercise-log {
+  display: flex;
+  flex-direction: column;
+  margin-top: -30px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.log-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.log-entry {
+  background-color: #f9f9f9; /* Light background for entries */
+  border-radius: 5px;
+  padding: 15px; /* Increased padding */
+  margin-bottom: 10px; /* Space between entries */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Light shadow */
+  transition: transform 0.2s; /* Animation on hover */
+}
+
+.log-entry:hover {
+  transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+.log-date {
+  font-size: 0.9em; /* Smaller font for date */
+  color: #666; /* Gray color for date */
+}
+
+.log-details {
+  font-size: 1em; /* Default font size for details */
+  color: #333; /* Darker color for better readability */
+}
+
+@media (max-width: 600px) {
+  .filter-button {
+    padding: 10px 16px; /* Responsive padding */
+    font-size: 0.9em; /* Smaller text on mobile */
+  }
+
+  .total-calories {
+    font-size: 1.5em; /* Responsive font size */
+  }
+
+  .chart-container {
+    max-width: 90%; /* Responsive width for smaller screens */
+    padding: 15px; /* Responsive padding */
+  }
+
+  .line-chart {
+    height: 250px;
+  }
+}

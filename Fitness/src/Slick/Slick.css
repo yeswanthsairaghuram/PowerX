@@ -1,0 +1,212 @@
+/* General resets and styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.slider-containe {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+.slide {
+    position: relative;
+    overflow: hidden;
+}
+
+.text-overlay,
+.text-overlay1,
+.text-overlay2,
+.right-corner-text {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.slick-active .text-overlay,
+.slick-active .text-overlay1,
+.slick-active .text-overlay2,
+.slick-active .right-corner-text {
+    opacity: 1;
+}
+
+/* Responsive typography for different screen sizes */
+.text-overlay,
+.text-overlay1,
+.text-overlay2 {
+    position: absolute;
+    left: 5%;
+    color: white;
+    letter-spacing: 4px;
+    font-weight: bold;
+    text-align: left;
+    z-index: 2;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    font-family: "Montserrat", sans-serif;
+}
+
+.text-overlay {
+    bottom: 40%;
+    font-size: 3rem;
+}
+
+.text-overlay1 {
+    bottom: 33%;
+    font-size: 3rem;
+}
+
+.text-overlay2 {
+    bottom: 26%;
+    font-size: 3rem;
+}
+
+/* Right corner text */
+.right-corner-text {
+    position: absolute;
+    right: 10%;
+    bottom: 15%;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    text-align: left;
+    font-family: "Montserrat", sans-serif;
+    z-index: 3;
+}
+
+.right-corner-text .lines {
+    width: 30px;
+    height: 75px;
+    position: relative;
+    border-left: 7px solid #008080;
+    border-right: 7px solid #008080;
+    right: 70px;
+    transform: skew(-22deg);
+    top: 72px;
+}
+
+/* Vertical numbering */
+.vertical-numbers {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.number-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 45px;
+}
+
+.number {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.number.active {
+    color: #008080;
+    font-weight: bold;
+}
+
+.line {
+    width: 2px;
+    height: 20px;
+    background-color: #008080;
+    transform: rotate(-15deg);
+}
+
+/* Responsive image scaling */
+.zoom-img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    animation: zoomIn 9s ease-in-out infinite;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .text-overlay {
+        font-size: 2.5rem;
+    }
+    .text-overlay1 {
+        font-size: 2.5rem;
+    }
+    .text-overlay2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .text-overlay {
+        font-size: 2rem;
+    }
+    .text-overlay1 {
+        font-size: 2rem;
+        margin-bottom: 35px;
+    }
+    .text-overlay2 {
+        font-size: 2rem;
+        margin-bottom: 70px;
+
+    }
+    .vertical-numbers {
+        right: 20px;
+    }
+    .right-corner-text {
+        font-size: 14px;
+        right: 2%;
+        bottom: 10%;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-overlay {
+        font-size: 1.7rem;
+    }
+    .text-overlay1 {
+        font-size: 1.7rem;
+        margin-bottom: 30px;
+    }
+    .text-overlay2 {
+        font-size: 1.7rem;
+        margin-bottom: 60px;
+    }
+    .right-corner-text {
+        font-size: 0.9rem;
+        left: 23%;
+        bottom: 10%;
+    }
+    .vertical-numbers {
+        right: 10px;
+    }
+    .number {
+        font-size: 18px;
+    }
+    .line {
+        height: 15px;
+    }
+}

@@ -1,0 +1,172 @@
+.metrics-container {
+  position: relative;
+}
+
+.metrics-button {
+  padding: 15px 30px;
+  background-color: #00b3b3;
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  right: -30px;
+  top: 50%;
+  transform: rotate(90deg) translateY(-50%);
+  transform-origin: center;
+  z-index: 100;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.metrics-button:hover {
+  background-color: #007f7f;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.metrics-popup {
+  position: fixed;
+  top: 50%;
+  right: -400px;
+  width: 380px;
+  background-color: #ffffff;
+  border: 2px solid #00b3b3;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 0 0px 16px rgba(31, 31, 31, 0.3);
+  transform: translateY(-50%);
+  z-index: 101;
+  opacity: 0;
+  transition: right 0.5s ease, opacity 0.5s ease;
+  padding-bottom: 0 !important;
+}
+
+.metrics-popup.show {
+  right: -30px;
+  opacity: 1;
+  animation: slideIn 0.5s ease forwards;
+}
+
+.metrics-popup.hide {
+  animation: slideOut 0.5s ease forwards;
+}
+
+.popup-inner {
+  position: relative;
+  text-align: center;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.popup-inner h2 {
+  color: #007f7f;
+}
+
+.close-icon {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #000;
+  background-color: #ffdddd;
+  border-radius: 50%;
+  padding: 2.3px 7.3px 3px 8px;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-icon:hover {
+  color: red;
+}
+
+.input-area {
+  margin: 20px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.input-area label {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.input-area input {
+  padding: 12px;
+  width: 100%;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: #00b3b3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.submit-button:hover {
+  background-color: #007f7f;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.speedometer-area {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.speedometer-area div {
+  margin: 0;
+  margin-top: 25px;
+  margin-bottom: 0 !important;
+}
+
+@keyframes slideIn {
+  from {
+    right: -400px;
+    opacity: 0;
+  }
+  to {
+    right: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    right: -30px;
+    opacity: 1;
+  }
+  to {
+    right: -400px;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.calc-again {
+  position: absolute;
+  bottom: 40px;
+  left: 100px;
+}

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.fitness-section-wrapper {
+  background-color: #000;
+  padding: 30px 0;
+}
+
+.fitness-section {
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  padding: 0 20px; 
+  overflow: hidden;
+}
+
+.fitness-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-top: 0.1px solid rgb(50, 50, 50);
+  transition: transform 0.2s ease;
+}
+
+.fitness-item:hover {
+  transform: scale(1.02);
+}
+
+.fitness-image img {
+  width: 150px;
+  height: auto;
+  border-radius: 15px;
+}
+
+.fitness-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 15px;
+  flex: 1; 
+}
+
+.fitness-info h2 {
+  color: white;
+  font-size: 28px;
+  margin: 0;
+}
+
+.fitness-description {
+  max-width: 100%;
+  text-align: left;
+}
+
+.fitness-description p {
+  font-size: 16px;
+  color: #c7c7cc;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.fitness-arrow {
+  font-size: 30px;
+  color: white;
+}
+
+.fitness-item:hover .fitness-arrow {
+  color: #01a9a9;
+  transform: rotate(45deg);
+  transition: transform 0.5s ease;
+}
+
+.fitness-item:hover .fitness-info h2 {
+  color: #019e9e;
+}
+
+@media (max-width: 768px) {
+  .fitness-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .fitness-image img {
+    width: 500px;
+    height: 300px;
+    margin-bottom: 10px;
+  }
+
+  .fitness-info {
+    width: 100%;
+  }
+
+  .fitness-info h2 {
+    font-size: 26px;
+  }
+
+  .fitness-description {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .fitness-image img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  .fitness-info h2 {
+    font-size: 22px;
+  }
+
+  .fitness-description p {
+    font-size: 12px;
+  }
+}

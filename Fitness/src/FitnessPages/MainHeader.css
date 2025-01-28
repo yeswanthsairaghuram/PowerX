@@ -1,0 +1,224 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  background-color: white;
+  box-shadow: 0px 0px 25px rgb(226, 226, 226);
+  position: relative;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  height: auto;
+  width: 80px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-weight: 500;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+  color: #00c6c2;
+}
+
+.arrow {
+  font-size: 16px;
+  margin-left: 5px;
+  color: #00c6c2;
+}
+
+.active {
+  color: #00c6c2;
+  font-weight: bold;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon {
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: orange;
+  color: white;
+  font-size: 12px;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: black;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 15px;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    height: 100%;
+    width: 250px;
+    background-color: white;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 50px;
+    padding-right: 20px;
+    transition: right 0.3s ease;
+    z-index: 99;
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 1000;
+    margin-left: auto;
+  }
+
+  .icons {
+    display: flex;
+    margin-left: 20px;
+  }
+
+  .nav-item {
+    padding: 15px 0;
+  }
+}
+
+.user-dropdown {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: white;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  width: 220px;
+  padding: 15px;
+  z-index: 100;
+  border-radius: 10px;
+  animation: fadeIn 0.3s ease-in-out;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.user-dropdown.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+
+.username-dropdown {
+  font-size: 18px;
+  font-weight: bold;
+  color: #008080;
+  margin-bottom: 5px;
+}
+
+.dropdown-item {
+  text-decoration: none;
+  color: #555;
+  font-size: 16px;
+  display: block;
+  margin: 8px 0;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  padding: 12px 15px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.dropdown-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+
+.dropdown-item:hover {
+  background-color: #e8f5fd;
+  color: #00c6c2;
+}
+
+.dropdown-item:hover::after {
+  background-color: #00c6c2;
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  transition: color 0.3s;
+  padding: 12px 15px;
+  border-radius: 5px;
+  width: 80%;
+  margin-top: 10px;
+  background-color: #c0392b;
+}
+
+.logout-btn:hover {
+  color: #c0392b;
+  background-color: #f8d7da;
+}

@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.test-main {
+    background-color: rgb(246, 246, 246);
+}
+.tpmain {
+    width: 98%;
+    /* height: max-content; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'montserrat';
+    /* margin-top: 50px; */
+}
+
+.testimonials {
+    padding-top: 30px;
+    font-size: 12px;
+    font-weight: 550;
+    letter-spacing: 8px;
+}
+
+.clientsSay {
+    margin-top: 10px;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+    .testimonials {
+        font-size: 8px;
+    }
+    .clientsSay {
+        font-size: 25px;
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .testimonials {
+        font-size: 5px;
+    }
+    .clientsSay {
+        font-size: 20px;
+        font-weight: 600;
+    }
+}

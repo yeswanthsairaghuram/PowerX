@@ -1,0 +1,314 @@
+.checkoutPage {
+  background-color: #f9f9f9; /* Light grey background */
+
+  padding: 40px;
+
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  font-family: "Roboto", sans-serif; /* Corrected comment syntax */
+}
+
+h1 {
+  text-align: center;
+
+  color: #2c3e50; /* Darker color for heading */
+
+  font-size: 2.4rem;
+
+  margin-bottom: 20px;
+}
+
+.checkoutTable {
+  width: 100%;
+
+  border-collapse: separate; /* Keep cells separate */
+
+  border-spacing: 0; /* No default spacing between cells */
+}
+
+.checkoutTable th {
+  padding: 15px;
+
+  font-size: 1.2rem;
+
+  text-align: right; /* Left align the headers */
+
+  color: #333; /* Dark color for header text */
+
+  font-weight: bold;
+
+  background-color: #f9f9f9; /* No background color for headers */
+
+  border: none; /* No border on header */
+}
+
+.checkoutTable th:first-child {
+  text-align: left;
+}
+
+/* Each row has rounded corners and a gap */
+
+.checkoutTable tr {
+  background-color: #fff; /* White background for item rows */
+
+  border-radius: 15px; /* Rounded corners for rows */
+
+  margin-bottom: 10px; /* Space between rows */
+
+  box-shadow: 4px 4px 15px rgba(118, 117, 117, 0.1); /* Soft shadow for bubbly effect */
+
+  display: table; /* Ensure rows are treated as table elements */
+
+  width: calc(100% - 20px); /* Allow for padding between rows */
+}
+
+thead tr:first-child {
+  background-color: transparent;
+
+  box-shadow: none;
+}
+
+.checkoutTable tr:last-child {
+  margin-bottom: 0; /* Remove margin for the last row */
+}
+
+/* Alternating row colors */
+
+.checkoutTable tr:nth-child(even) {
+  background-color: #ebebeb; /* Lighter grey for even rows */
+}
+
+.checkoutTable td {
+  padding: 15px 20px;
+
+  color: #34495e; /* Dark color for text */
+
+  border: none; /* No border on cells */
+
+  border-radius: 15px; /* Rounded corners for table cells */
+}
+
+/* Ensure proper alignment */
+
+.checkoutTable td:first-child {
+  text-align: left; /* Align product names to the left */
+
+  width: 60%; /* Fixed width for the product name */
+}
+
+.checkoutTable td:nth-child(2) {
+  text-align: center; /* Center align quantity */
+
+  width: 20%; /* Fixed width for quantity */
+}
+
+.checkoutTable td:last-child {
+  text-align: right; /* Align prices to the right */
+
+  width: 20%; /* Fixed width for price */
+}
+
+/* Order summary section */
+
+.checkoutPage {
+  background-color: #f9f9f9;
+
+  padding: 40px;
+
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  text-align: center;
+
+  color: #2c3e50;
+
+  font-size: 2.4rem;
+
+  margin-bottom: 20px;
+}
+
+.checkoutTable {
+  width: 100%;
+
+  border-collapse: separate;
+
+  border-spacing: 0;
+
+  margin-bottom: 20px;
+}
+
+.addressSection {
+  margin-bottom: 30px;
+
+  background-color: #fff;
+
+  padding: 20px;
+
+  border-radius: 10px;
+
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.addressSection textarea {
+  width: 100%;
+
+  padding: 10px;
+
+  font-size: 1rem;
+
+  height: 200px;
+
+  border: 1px solid #ccc;
+
+  border-radius: 5px;
+
+  margin-top: 10px;
+}
+
+.checkoutSummary {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+
+  background-color: #fff;
+
+  padding: 20px;
+
+  border-radius: 10px;
+
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.checkoutSummary h2 {
+  margin-bottom: 10px;
+
+  color: #2c3e50;
+
+  font-size: 1.8rem;
+}
+
+.checkoutSummary p {
+  margin: auto 0;
+
+  font-size: 1.4rem;
+
+  color: #34495e;
+}
+
+.confirmOrderButton {
+  display: block;
+
+  margin-left: auto;
+
+  background-color: #27ae60;
+
+  color: white;
+
+  padding: 15px 30px;
+
+  font-size: 1.2rem;
+
+  font-weight: bold;
+
+  border: none;
+
+  border-radius: 50px;
+
+  cursor: pointer;
+
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.confirmOrderButton:hover {
+  background-color: #2ecc71;
+
+  transform: translateY(-3px);
+}
+
+.confirmOrderButton:active {
+  transform: scale(0.98);
+}
+
+/* Media Queries */
+
+/* For tablets and medium-sized screens */
+
+@media (max-width: 768px) {
+  .checkoutPage {
+    padding: 20px;
+  }
+
+  .checkoutSummary {
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+  }
+
+  .checkoutSummary h2,
+  .checkoutSummary p {
+    margin-bottom: 10px;
+  }
+
+  .confirmOrderButton {
+    width: 100%;
+
+    margin: 20px 0;
+  }
+
+  /* Make table more compact on smaller screens */
+
+  .checkoutTable th,
+  .checkoutTable td {
+    padding: 10px;
+
+    font-size: 1rem;
+  }
+
+  .addressSection textarea {
+    height: 150px;
+  }
+}
+
+/* For mobile and small screens */
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .checkoutSummary {
+    padding: 15px;
+  }
+
+  .checkoutSummary h2 {
+    font-size: 1.6rem;
+  }
+
+  .checkoutSummary p {
+    font-size: 1.2rem;
+  }
+
+  .confirmOrderButton {
+    font-size: 1rem;
+
+    padding: 10px 20px;
+  }
+
+  .checkoutTable th,
+  .checkoutTable td {
+    padding: 8px;
+
+    font-size: 0.9rem;
+  }
+}

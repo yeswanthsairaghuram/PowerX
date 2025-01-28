@@ -1,0 +1,159 @@
+/* BuyNowPage.css */
+
+.buyNowPage {
+  background-color: #f9f9f9; /* Light grey background */
+
+  padding: 40px;
+
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  text-align: center;
+
+  color: #2c3e50; /* Darker color for heading */
+
+  font-size: 2.4rem;
+
+  margin-bottom: 20px;
+}
+
+.buyNowSummary {
+  background-color: #fff; /* White background for product summary */
+
+  padding: 20px;
+
+  border-radius: 10px;
+
+  display: flex;
+
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+
+  margin-bottom: 30px;
+}
+
+.buyNowSummary img {
+  width: 150px; /* Width of the image */
+
+  height: 150px; /* Height of the image */
+
+  object-fit: cover; /* Keep aspect ratio while scaling */
+
+  margin-right: 20px; /* Space between image and text */
+}
+
+.buyNowSummary h2 {
+  margin: 0; /* No margin for header */
+
+  color: #2c3e50; /* Darker color for product name */
+
+  font-size: 1.8rem; /* Larger font size */
+}
+
+.buyNowSummary p {
+  margin: 5px 0; /* Spacing for price */
+
+  font-size: 1.4rem; /* Font size for price */
+
+  color: #34495e; /* Darker color for price */
+}
+
+.bnsdata {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: start;
+
+  justify-content: center;
+}
+
+.addressSection {
+  margin-bottom: 30px; /* Space below */
+
+  background-color: #fff; /* White background for address section */
+
+  padding: 20px; /* Padding for comfort */
+
+  border-radius: 10px; /* Rounded corners */
+
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.addressSection textarea {
+  width: 100%; /* Full width */
+
+  padding: 10px; /* Padding for comfort */
+
+  font-size: 1rem; /* Font size */
+
+  height: 150px; /* Height of the textarea */
+
+  border: 1px solid #ccc; /* Light grey border */
+
+  border-radius: 5px; /* Rounded corners */
+
+  margin-top: 10px; /* Space above */
+}
+
+.confirmOrderButton {
+  display: block; /* Block display */
+
+  margin: 20px auto; /* Centered with margins */
+
+  background-color: #27ae60; /* Green background */
+
+  color: white; /* White text */
+
+  padding: 15px 30px; /* Comfortable padding */
+
+  font-size: 1.2rem; /* Font size */
+
+  font-weight: bold; /* Bold text */
+
+  border: none; /* No border */
+
+  border-radius: 50px; /* Rounded corners */
+
+  cursor: pointer; /* Pointer cursor */
+
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.confirmOrderButton:hover {
+  background-color: #2ecc71; /* Lighter green on hover */
+
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+.confirmOrderButton:active {
+  transform: scale(0.98); /* Slight shrink on active */
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .buyNowPage {
+    padding: 20px; /* Less padding on smaller screens */
+  }
+
+  .confirmOrderButton {
+    width: 100%; /* Full width button */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem; /* Smaller font size for small screens */
+  }
+
+  .confirmOrderButton {
+    font-size: 1rem; /* Smaller font size for button */
+
+    padding: 10px 20px; /* Less padding */
+  }
+}

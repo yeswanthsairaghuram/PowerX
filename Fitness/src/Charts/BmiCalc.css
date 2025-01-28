@@ -1,0 +1,47 @@
+.metrics-container-dash {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.input-area-dash {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-area-dash label {
+    margin: 5px 0;
+}
+
+.input-area-dash input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.submit-button-dash {
+    background-color: #008080;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.calc-again-dash {
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.submit-button-dash:hover {
+    background-color: #004e4e;
+}
+
+.result-area-dash {
+    margin-top: 30px;
+}

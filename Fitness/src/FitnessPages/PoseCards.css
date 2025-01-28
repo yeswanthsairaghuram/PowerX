@@ -1,0 +1,112 @@
+* {
+  text-decoration: none;
+}
+
+.pose-cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #F0F9F9;
+}
+
+.search-bar-container {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar-input {
+  width: 100%;
+  padding: 12px 18px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 18px;
+  outline: none;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.search-bar-input:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 10px rgba(40, 167, 69, 0.2);
+}
+
+.pose-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 20px;
+  justify-content: center;
+}
+
+.pose-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.pose-card {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  width: 290px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pose-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.pose-image {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #e0e0e0, #ffffff);
+  padding: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.pose-name {
+  font-size: 22px;
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+}
+
+.pose-subname {
+  font-size: 14px;
+  color: #777;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.pose-benefits {
+  font-size: 15px;
+  color: #555;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 3em;
+  line-height: 1.5em;
+}
+
+.pose-benefits::before {
+  content: 'Benefits: ';
+  font-weight: bold;
+  color: #28a745;
+}

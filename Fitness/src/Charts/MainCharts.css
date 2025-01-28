@@ -1,0 +1,104 @@
+.main-charts-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 30px;
+    background-color: #e0f4f4be; 
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.main-charts-heading {
+    font-size: 2.1em;
+    color: #2c3e50; 
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+.main-charts-description {
+    font-size: 1.1em;
+    text-align: center;
+    color: #7f8c8d; 
+    margin-bottom: 40px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.chart-container {
+    background: #fff; 
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.chart-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.chart-title {
+    font-size: 1.6em;
+    color: #008080; 
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 10px;
+}
+
+@media (max-width: 1024px) {
+    .main-charts-heading {
+        font-size: 2.5em; /* Slightly smaller heading */
+    }
+
+    .main-charts-description {
+        font-size: 1.1em; /* Slightly smaller description */
+    }
+}
+
+@media (max-width: 768px) {
+    .main-charts-wrapper {
+        padding: 20px; /* Less padding on smaller screens */
+    }
+    
+    .dashboard-grid {
+        grid-template-columns: 1fr; /* Stack on smaller screens */
+    }
+
+    .main-charts-heading {
+        font-size: 2.2em; /* Smaller heading for mobile */
+    }
+
+    .main-charts-description {
+        font-size: 1em; /* Smaller description for mobile */
+    }
+
+    .chart-title {
+        font-size: 1.4em; /* Adjust title size for better readability */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-charts-heading {
+        font-size: 1.8em; /* Further reduce heading size for very small screens */
+    }
+
+    .main-charts-description {
+        font-size: 0.9em; /* Further reduce description size */
+    }
+
+    .chart-title {
+        font-size: 1.2em; /* Further adjust title size */
+    }
+
+    .chart-container {
+        padding: 15px; /* Adjust padding for containers */
+    }
+}

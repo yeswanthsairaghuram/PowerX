@@ -1,0 +1,113 @@
+.exercise-videos-container {
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+  }
+  
+  .exercise-videos-heading {
+    font-size: 40px;
+    font-weight: 700;
+    color: rgb(122, 122, 122);
+    margin-bottom: 33px;
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.exercise-videos-heading::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #008080;
+    z-index: 1;
+}
+
+.exercise-videos-heading .highlight {
+    color: #008080;
+    text-transform: capitalize;
+}
+
+
+  
+  .exercise-videos-heading .highlight {
+    color: #008080;
+    text-transform: capitalize;
+  }
+  
+  .exercise-videos-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    /* align-items: center; */
+  }
+  
+  .exercise-video {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    background-color: #f0f8f8;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .exercise-video:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .video-thumbnail-wrapper {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .video-thumbnail {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .exercise-video:hover .video-thumbnail {
+    transform: scale(1.05);
+  }
+  
+  .video-info {
+    padding: 15px;
+    background-color: #fff;
+  }
+  
+  .video-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(37, 37, 37);
+    margin-bottom: 8px;
+  }
+  
+  .video-channel {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  @media (max-width: 768px) {
+    .exercise-videos-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .exercise-video {
+      width: 100%;
+    }
+  
+    .exercise-videos-heading {
+      font-size: 36px;
+    }
+  }
+  

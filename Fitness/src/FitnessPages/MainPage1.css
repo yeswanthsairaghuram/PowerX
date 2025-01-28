@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+      background-color: #F0F9F9;
+}
+
+.hero-banner {
+    padding: 20px;
+    margin: 0;
+    background-color: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.hero-banner-heading-yoga {
+    font-weight: 700;
+    font-size: 36px;
+    padding-top: 50px;
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    animation: slideInFromLeft 1s ease-in-out;
+}
+
+.hero-banner-subtext-yoga {
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0px 80px;
+    text-align: center;
+    animation: fadeInUp 1s ease-in-out;
+    margin-bottom: 50px;
+}
+
+.hero-banner-button-wrapper {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.hero-banner-button {
+    text-decoration: none;
+    width: 180px;
+    text-align: center;
+    background-color: #008080;
+    padding: 12px;
+    font-size: 18px;
+    text-transform: none;
+    color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+.hero-banner-button:hover {
+    background-color: #008080;
+}
+
+.hero-banner-watermark-yoga {
+    font-weight: 600;
+    color: #00C6C2;
+    opacity: 0.15;
+    font-size: 250px;
+    position: absolute;
+    top: 20px;
+    left: 80px;
+    z-index: 0;
+    display: none;
+}
+
+.hero-banner-img {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 25px;
+    animation: scaleUp 1s ease-in-out;
+}
+
+.content {
+    margin-left: 50px;
+    margin-top: 40px;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero-banner-content {
+        flex-direction: row;
+        text-align: left;
+    }
+    .hero-banner-heading-yoga {
+        font-size: 40px;
+    }
+    .hero-banner-watermark-yoga {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .hero-banner {
+        margin-top: 0 !important;
+        padding: 40px;
+    }
+    .hero-banner-content {
+        justify-content: space-between;
+    }
+    .hero-banner-heading-yoga {
+        font-size: 44px;
+    }
+}
